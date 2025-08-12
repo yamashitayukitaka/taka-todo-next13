@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import './globals.css'
-import SupabaseListener from './components/supabase-listener'
+import SupabaseListener from '@/app/components/supabase-listener'
 
 const inter = Inter({ subsets: ['latin'] })
 
