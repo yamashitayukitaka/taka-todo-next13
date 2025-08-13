@@ -1,5 +1,5 @@
 import React from 'react'
-import { BBSData } from "../types/types";
+import { BBSData } from "@/app/types/types";
 import BBSCard from '@/app/components/layouts/BBSCard';
 
 interface BBSAllDataProps {
