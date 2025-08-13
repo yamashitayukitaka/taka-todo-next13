@@ -4,7 +4,7 @@ const nextConfig = {
     serverActions: true,
   },
   images: {
-    domains: ['ppyljxslgrkyveogfzyg.supabase.co'],
+    domains: ['ktfdfxflirqkfsoqmjox.supabase.co'],
     // Supabase Storageにある画像をnext/imageで表示するための設定
   },
 }
