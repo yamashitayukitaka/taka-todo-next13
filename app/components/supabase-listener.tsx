@@ -2,7 +2,7 @@
 
 import { createServerComponentClient } from '@supabase/auth-helpers-nextjs'
 import { cookies } from 'next/headers'
-import Navigation from './navigation'
+import Navigation from '@/app/components/navigation'
 import type { Database } from '@/lib/database.types'
 
 // 認証状態の監視
