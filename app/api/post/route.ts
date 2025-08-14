@@ -33,3 +33,36 @@ export async function GET(req: Request) {
 
 
 // ==========================================================
+
+
+// サーバーからデータベースへ送る為のPOST
+export async function POST(req: Request) {
+  // reqはクライアントサイドからfetchで送られた
+  // リクエスト本体（body, headers ）などを受け取るための仮引数
+  // req: Request の Request は TypeScript における「型定義」
+  const { username, title, content } = await req.json();
+  // req.json()の処理が終わってから分割代入させるためawaitが必要
+  // await は右辺の Promise の「完了（resolve）」を待ってから、その「結果の値」を左辺に代入する。
+  // awaitを付けないとreq.json() の完了を待たずにその戻り値（= Promise）を分割代入しようとすることになり、エラーが発生します。
+
+
+
+  const post = await prisma.post.create(
+    {
+      data: {
+        username,
+        title,
+        content,
+      }
+      // 省略記法以下と同意
+      // data: {
+      //   username:username,
+      //   title:title,
+      //   content:content,
+      // }
+    }
+  );
+
+  return NextResponse.json(post);
+
+}
