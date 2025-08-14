@@ -27,7 +27,7 @@ export const formSchema = z.object({
     .max(140, { message: "本文は10文字以内で入力してくだい" }),
 })
 
-const createBBSPage = () => {
+const CreateBBSPage = () => {
   const router = useRouter();
   const form = useForm({
     resolver: zodResolver(formSchema),
