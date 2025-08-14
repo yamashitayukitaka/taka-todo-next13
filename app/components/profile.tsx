@@ -143,7 +143,7 @@ const Profile = () => {
   }
 
   return (
-    <div>
+    <div className='max-w-[600px] mx-auto'>
       <div className="text-center font-bold text-xl mb-10">プロフィール</div>
       <form onSubmit={handleSubmit(onSubmit)}>
         {/* アバター画像 */}

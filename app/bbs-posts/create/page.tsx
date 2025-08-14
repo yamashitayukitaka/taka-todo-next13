@@ -11,7 +11,7 @@ import { z } from "zod"
 import { useForm } from "react-hook-form"
 import { Textarea } from "@/components/ui/textarea"
 import { useRouter } from "next/navigation"
-import { postBBS } from "@/app/actions/postBBSActions"
+// import { postBBS } from "@/app/actions/postBBSActions"
 
 
 export const formSchema = z.object({
@@ -66,7 +66,7 @@ const createBBSPage = () => {
     } catch (err) {
       console.error(err);
     }
-    // postBBS({ username, title, content });
+    postBBS({ username, title, content });
   }
 
 
@@ -93,7 +93,7 @@ const createBBSPage = () => {
             <FormItem>
               <FormLabel>タイトル</FormLabel>
               <FormControl>
-                <Input placeholder="shadcn" {...field} />
+                <Input placeholder="タイトル" {...field} />
               </FormControl>
               <FormMessage />
             </FormItem>

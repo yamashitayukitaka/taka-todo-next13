@@ -38,7 +38,7 @@ const SettingsLayout = ({ children }: { children: React.ReactNode }) => {
   const pathname = usePathname()
 
   return (
-    <div className="grid grid-cols-3 gap-3">
+    <div className="grid grid-cols-3 gap-3 w-full max-w-[600px] mx-auto">
       <div className="col-span-1 text-sm space-y-1 font-bold flex flex-col">
         {subNavigation.map((item, index) => (
           <Link href={item.href} key={index}>
