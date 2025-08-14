@@ -2,7 +2,7 @@ import React from 'react'
 import Link from 'next/link';
 
 
-import { BBSData } from "../types/types";
+import { BBSData } from "@/app/types/types";
 import {
   Card,
   // CardAction,
