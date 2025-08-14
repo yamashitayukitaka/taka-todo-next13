@@ -12,20 +12,10 @@ import { useForm } from "react-hook-form"
 import { Textarea } from "@/components/ui/textarea"
 import { useRouter } from "next/navigation"
 // import { postBBS } from "@/app/actions/postBBSActions"
+import { formSchema } from "@/lib/schema"
 
 
-export const formSchema = z.object({
-  username: z
-    .string()
-    .min(2, { message: "ユーザー名は2文字以上で入力してくだい" }),
-  title: z
-    .string()
-    .min(2, { message: "タイトルは2文字以上で入力してくだい" }),
-  content: z
-    .string()
-    .min(10, { message: "本文は10文字以上で入力してくだい" })
-    .max(140, { message: "本文は10文字以内で入力してくだい" }),
-})
+
 
 const CreateBBSPage = () => {
   const router = useRouter();
@@ -118,4 +108,4 @@ const CreateBBSPage = () => {
   )
 }
 
-export default createBBSPage
+export default CreateBBSPage
