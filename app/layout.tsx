@@ -22,7 +22,7 @@ export default function RootLayout({
 
         <div>
 
-          {/* @ts-expect-error next version of TS will fix this */}
+
           <Header />
           <SupabaseListener />
           <main>{children}</main>
