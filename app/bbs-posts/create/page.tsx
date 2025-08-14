@@ -41,7 +41,7 @@ const createBBSPage = () => {
   async function onSubmit(value: z.infer<typeof formSchema>) {
     const { username, title, content } = value
     try {
-      await fetch("http://localhost:3009/api/post", {
+      await fetch("http://localhost:3000/api/post", {
         // フロントエンドからエンドポイントのファイルにアクセスした場合
         // ファイルはVSコード内にあるが、
         // エンドポイントにfetchしたということはサバ―にアクセスしたと考える
@@ -66,7 +66,7 @@ const createBBSPage = () => {
     } catch (err) {
       console.error(err);
     }
-    postBBS({ username, title, content });
+    // postBBS({ username, title, content });
   }
 
 
